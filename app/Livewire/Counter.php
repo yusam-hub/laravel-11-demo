@@ -2,6 +2,11 @@
 
 namespace App\Livewire;
 
+use Livewire\Attributes\Layout;
+use Livewire\Component;
+use Illuminate\Http\Response;
+
+//#[Layout('components.layouts.app2')]
 class Counter extends \Livewire\Component
 {
     public int $count = 1;
@@ -15,8 +20,15 @@ class Counter extends \Livewire\Component
     {
         $this->count--;
     }
+    //#[Layout('components.layouts.app2')]
+    //#[Title('Create Post')]
     public function render()
     {
-        return view('livewire.counter');
+        return view('livewire.counter')
+            //->layout('components.layouts.app2')
+            /*->response(function(Response $response) {
+                $response->header('X-Custom-Header', true);
+            })*/
+            ;
     }
 }
