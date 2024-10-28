@@ -8,3 +8,4 @@ Route::get('/', function () {
 });
 
 Route::get('/counter', Counter::class);
+Route::get('/auth', \App\Livewire\AuthForm::class);
