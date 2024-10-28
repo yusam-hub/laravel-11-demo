@@ -27,7 +27,7 @@ class Counter extends \Livewire\Component
         return view('livewire.counter')
             //->layout('components.layouts.app2')
             /*->response(function(Response $response) {
-                $response->header('X-Custom-Header', true);
+                $response->header('XXX', true);
             })*/
             ;
     }

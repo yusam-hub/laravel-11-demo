@@ -8,13 +8,5 @@
     </head>
     <body>
         {{ $slot }}  222
-
-        @script
-        <script>
-            setInterval(() => {
-                $wire.$refresh()
-            }, 2000)
-        </script>
-        @endscript
     </body>
 </html>

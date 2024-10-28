@@ -8,5 +8,10 @@
     </head>
     <body>
         {{ $slot }}
+
+        <script>
+            let app = <?php echo json_encode(['$title']); ?>;
+            console.log(app);
+        </script>
     </body>
 </html>
