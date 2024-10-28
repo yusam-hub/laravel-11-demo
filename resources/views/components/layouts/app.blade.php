@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <title>{{ $title ?? 'Page Title' }}</title>
+        @fluxStyles
     </head>
     <body>
         {{ $slot }}
@@ -13,5 +14,6 @@
             let app = <?php echo json_encode(['$title']); ?>;
             console.log(app);
         </script>
+        @fluxScripts
     </body>
 </html>
